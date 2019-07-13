@@ -106,7 +106,7 @@ console.log(uni);
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 
-zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+const zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
 {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
 {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
 {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
@@ -152,11 +152,22 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
+
 let populationTotal = 0;
 
-zooAnimals.reduce((acc, val) => { //need help
-  populationTotal = acc + val
-})
+// function reducer() {
+//   const populations = zooAnimals.map(element => element.population);
+//   console.log(populations);
+//   const total = populations.reduce((acc, val) => {
+//     return acc + val
+//   });
+//   return total
+// }
+
+populationTotal = zooAnimals.reduce((acc, val) => {
+  return acc + val.population
+}, 0);
+
 
 console.log(populationTotal);
 
