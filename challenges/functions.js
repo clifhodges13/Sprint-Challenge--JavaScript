@@ -42,7 +42,8 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation: 
 
-// nestedFuntion() is inside of myFunction() and therefore has access to it's surrounding environment. Closure tells us that functions have access to their outside environments, but cannot reach in.
+// nestedFuntion() is inside of myFunction() and therefore has access to it's surrounding environment. 
+// Closure tells us that functions have access to their outside environments, but cannot reach in.
 
 
 const external = "I'm outside the function";
